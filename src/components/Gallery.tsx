@@ -3,18 +3,18 @@ import Image from "next/image";
 const GALLERY_ITEMS = [
   {
     label: "Trädgårdsanläggning",
-    alt: "Professionellt anlagd trädgård med gröna växter och gräsmatta",
+    alt: "Professionellt anlagd trädgård med gröna växter och blommor",
     src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Plattsättning",
-    alt: "Stenlagd uteplats med markplattor i trädgård",
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&crop=center",
+    alt: "Stenlagd gångväg med markplattor i trädgårdsmiljö",
+    src: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Snöröjning",
-    alt: "Snöröjning av väg under vintern i norrländskt landskap",
-    src: "https://images.unsplash.com/photo-1610994806720-4f9e31b74c28?w=800&h=600&fit=crop&crop=center",
+    alt: "Snöröjning av väg under vintern",
+    src: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Markarbete",
@@ -28,8 +28,8 @@ const GALLERY_ITEMS = [
   },
   {
     label: "Utemiljö",
-    alt: "Färdig utemiljö med grönska och markbeläggning",
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop&crop=center",
+    alt: "Färdig utemiljö med trädgård och gräsmatta",
+    src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop&crop=center",
   },
 ];
 

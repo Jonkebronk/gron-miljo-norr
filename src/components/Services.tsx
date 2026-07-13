@@ -11,16 +11,11 @@ const SERVICES = [
         strokeWidth={1.5}
         stroke="currentColor"
       >
+        {/* Flower/plant icon */}
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M12 21c-1.5 0-6-3.5-6-9 0-3.5 2.5-6 6-6s6 2.5 6 6c0 5.5-4.5 9-6 9z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21V12" />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 15c1-1 2-2.5 3-3"
+          d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
         />
       </svg>
     ),
@@ -37,10 +32,11 @@ const SERVICES = [
         strokeWidth={1.5}
         stroke="currentColor"
       >
+        {/* Snowflake icon */}
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M12 3v18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12h18M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"
+          d="M12 2v20m0-20l3 3m-3-3L9 5m3 17l3-3m-3 3l-3-3M2 12h20m-20 0l3-3m-3 3l3 3m17-3l-3-3m3 3l-3 3M5.636 5.636l2.121 2.121m8.486 8.486l2.121 2.121M18.364 5.636l-2.121 2.121M7.757 16.243l-2.121 2.121"
         />
       </svg>
     ),
@@ -57,10 +53,11 @@ const SERVICES = [
         strokeWidth={1.5}
         stroke="currentColor"
       >
+        {/* Excavator/digging icon */}
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.049.58.025 1.194-.14 1.743"
+          d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
         />
       </svg>
     ),

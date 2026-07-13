@@ -1,7 +1,22 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
-    <section className="bg-forest-50 px-4 py-20 md:px-8 md:py-32">
-      <div className="mx-auto max-w-6xl text-center">
+    <section className="relative min-h-[70vh] px-4 py-20 md:min-h-[80vh] md:px-8 md:py-32">
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&h=1080&fit=crop&crop=center"
+        alt="Grön trädgårdsmiljö"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/80" />
+
+      {/* Content */}
+      <div className="relative mx-auto max-w-6xl text-center">
         <h1 className="text-4xl font-bold tracking-tight text-forest-900 md:text-6xl">
           Grön Miljö Norr
         </h1>
