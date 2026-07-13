@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Integritetspolicy – Grön Miljö Norr",
   description:
     "Läs om hur Grön Miljö Norr hanterar dina personuppgifter i enlighet med GDPR.",
+  alternates: {
+    canonical: `${SITE_CONFIG.url}/integritetspolicy`,
+  },
 };
 
 export default function IntegritetspolicyPage() {
@@ -13,7 +17,7 @@ export default function IntegritetspolicyPage() {
       <div className="mx-auto max-w-3xl">
         <Link
           href="/"
-          className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-forest-700 hover:underline"
+          className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-forest-700 underline decoration-forest-700/30 underline-offset-2 hover:decoration-forest-700"
         >
           &larr; Tillbaka till startsidan
         </Link>
@@ -32,10 +36,10 @@ export default function IntegritetspolicyPage() {
               som samlas in via denna webbplats. Vid frågor om vår
               personuppgiftshantering, kontakta oss på{" "}
               <a
-                href="mailto:peter@test-gronmiljo.se"
-                className="text-forest-700 hover:underline"
+                href={`mailto:${SITE_CONFIG.email}`}
+                className="text-forest-700 underline decoration-forest-700/30 underline-offset-2 hover:decoration-forest-700"
               >
-                peter@test-gronmiljo.se
+                {SITE_CONFIG.email}
               </a>
               .
             </p>
@@ -101,10 +105,10 @@ export default function IntegritetspolicyPage() {
               samtycke och att lämna klagomål till Integritetsskyddsmyndigheten
               (IMY). Kontakta oss på{" "}
               <a
-                href="mailto:peter@test-gronmiljo.se"
-                className="text-forest-700 hover:underline"
+                href={`mailto:${SITE_CONFIG.email}`}
+                className="text-forest-700 underline decoration-forest-700/30 underline-offset-2 hover:decoration-forest-700"
               >
-                peter@test-gronmiljo.se
+                {SITE_CONFIG.email}
               </a>{" "}
               för att utöva dina rättigheter.
             </p>
