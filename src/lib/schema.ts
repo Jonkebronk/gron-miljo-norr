@@ -1,4 +1,5 @@
 import type { WithContext, LocalBusiness } from "schema-dts";
+import { SITE_CONFIG } from "./site-config";
 
 export const localBusinessSchema: WithContext<LocalBusiness> = {
   "@context": "https://schema.org",
@@ -6,8 +7,9 @@ export const localBusinessSchema: WithContext<LocalBusiness> = {
   name: "Grön Miljö Norr",
   description:
     "Professionell trädgårdsanläggning, markarbeten och snöröjning i Luleå.",
-  telephone: "+46705555555",
-  email: "peter@test-gronmiljo.se",
+  telephone: SITE_CONFIG.phoneHref.replace("tel:", ""),
+  email: SITE_CONFIG.email,
+  url: SITE_CONFIG.url,
   areaServed: {
     "@type": "City",
     name: "Luleå",

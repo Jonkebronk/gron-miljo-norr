@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/site-config";
 
 export default function NotFound() {
   return (
@@ -19,10 +20,10 @@ export default function NotFound() {
           Till startsidan
         </Link>
         <a
-          href="tel:+46705555555"
+          href={SITE_CONFIG.phoneHref}
           className="inline-flex items-center justify-center rounded-lg border-2 border-forest-700 px-6 py-3 text-base font-semibold text-forest-700 transition-colors hover:bg-forest-700 hover:text-white"
         >
-          Ring 070-555 55 55
+          Ring {SITE_CONFIG.phone}
         </a>
       </div>
     </section>

@@ -1,14 +1,41 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { SITE_CONFIG } from "@/lib/site-config";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: Connect to form service (Server Action, Formspree, etc.)
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok || !result.success) {
+        setError(result.error ?? "Något gick fel. Försök igen.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Kunde inte skicka meddelandet. Kontrollera din anslutning.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -27,19 +54,19 @@ export function Contact() {
             <div>
               <h3 className="text-lg font-semibold text-forest-900">Telefon</h3>
               <a
-                href="tel:+46705555555"
+                href={SITE_CONFIG.phoneHref}
                 className="mt-1 inline-block text-xl font-semibold text-forest-700 hover:underline"
               >
-                070-555 55 55
+                {SITE_CONFIG.phone}
               </a>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-forest-900">E-post</h3>
               <a
-                href="mailto:peter@test-gronmiljo.se"
+                href={`mailto:${SITE_CONFIG.email}`}
                 className="mt-1 inline-block text-forest-700 hover:underline"
               >
-                peter@test-gronmiljo.se
+                {SITE_CONFIG.email}
               </a>
             </div>
             <div>
@@ -78,6 +105,21 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot – hidden from real users, bots fill it in */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] -top-[9999px]"
+                >
+                  <label htmlFor="company">Företag</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div>
                   <label
                     htmlFor="name"
@@ -141,11 +183,19 @@ export function Contact() {
                     placeholder="Berätta om ditt projekt..."
                   />
                 </div>
+
+                {error && (
+                  <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+                    {error}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-forest-700 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-forest-900"
+                  disabled={loading}
+                  className="w-full rounded-lg bg-forest-700 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-forest-900 disabled:opacity-60"
                 >
-                  Skicka meddelande
+                  {loading ? "Skickar..." : "Skicka meddelande"}
                 </button>
               </form>
             )}
