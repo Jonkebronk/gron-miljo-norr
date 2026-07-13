@@ -8,28 +8,28 @@ const GALLERY_ITEMS = [
   },
   {
     label: "Plattsättning",
-    alt: "Stenlagd gångväg med markplattor i trädgårdsmiljö",
-    src: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=800&h=600&fit=crop&crop=center",
+    alt: "Markplattor lagda i trädgårdsgång omgiven av grönska",
+    src: "https://images.unsplash.com/photo-1676984290997-b862e8f0919c?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Snöröjning",
-    alt: "Snöröjning av väg under vintern",
-    src: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=800&h=600&fit=crop&crop=center",
+    alt: "Snöröjningsfordon i arbete under vintern",
+    src: "https://images.unsplash.com/photo-1712136902177-ba821ec0063c?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Markarbete",
-    alt: "Markarbete med grävmaskin vid anläggningsprojekt",
-    src: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&h=600&fit=crop&crop=center",
+    alt: "Grävmaskin vid markarbete och schaktning",
+    src: "https://images.unsplash.com/photo-1575281923032-f40d94ef6160?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Plantering",
-    alt: "Nyplanterade blommor och växter i trädgårdsrabatt",
-    src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop&crop=center",
+    alt: "Händer som planterar växter i jord",
+    src: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?w=800&h=600&fit=crop&crop=center",
   },
   {
     label: "Utemiljö",
-    alt: "Färdig utemiljö med trädgård och gräsmatta",
-    src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop&crop=center",
+    alt: "Hemtrevlig uteplats med trädgårdsmöbler och grönska",
+    src: "https://images.unsplash.com/photo-1621506821957-1b50ab7787a4?w=800&h=600&fit=crop&crop=center",
   },
 ];
 
